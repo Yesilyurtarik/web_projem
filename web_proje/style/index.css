@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+.title {
+   
+    margin-top: 10px;
+}
+
+.pic {
+    margin-top: 10px;
+    width: 150px;
+}
+
+.ana-img {
+    width: 350px;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 24px -4px rgba(250,8,242,1);
+    -moz-box-shadow: 10px 10px 24px -4px rgb(243, 141, 240);
+    box-shadow: 10px 10px 24px -4px rgb(236, 148, 233);
+}
+
+.ana-img:hover{
+    scale: 1.1;
+}
+
+html,body {
+    font-family: 'Manrope', sans-serif !important;
+    background-color: #480ca8 !important;
+    color: white !important;
+}
+
+a{
+    color: white !important;
+}
+
+.navbar {
+    color: white !important;
+}
+
+a:hover {
+    color: #ee05cf !important;
+}
+
+.tt {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-left: 30px;
+    box-sizing: content-box;
+    font-weight: 600;
+}
