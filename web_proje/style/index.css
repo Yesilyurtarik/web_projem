@@ -39,10 +39,23 @@ a:hover {
     color: #ee05cf !important;
 }
 
+.s-title:hover {
+    color: #ee05cf !important;
+    cursor: pointer;
+}
+
 .tt {
     margin-top: 20px;
     margin-bottom: 100px;
     margin-left: 30px;
     box-sizing: content-box;
     font-weight: 600;
+}
+
+.carousel {
+    width: 800px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
