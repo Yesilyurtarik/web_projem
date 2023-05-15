@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Güzel Şehrim Zonguldak</title>
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="anasayfa.html">Zonguldak</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="anasayfa.html">Hakkında</a>
+              <a class="nav-link" href="özgeçmiş.html">Özgeçmiş</a>
+              <a class="nav-link" href="şehrim.html">Şehrim</a>
+              <a class="nav-link" href="mirasımız.html">Mirasımız</a>
+              <a class="nav-link" href="hobiler.html">İlgi Alanlarım</a>
+              <a class="nav-link" href="iletişim.html">İletişim</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+ 
+</header>
+
+<div class="container-sm d-flex justify-content-center align-items-center flex-column  mb-5 text-wrap">
+    <section>
+        <div id="mg_flex_main_article">
+            <h2>
+                İletişim Formu
+            </h2>
+            <div id="mg_flex_default_article">
+                <form name="iletisim_form" action="./action/iletisim.php" method="post" onsubmit="return validateForm();">
+                    <div class="input_description">İsminiz:</div>
+                    <input type="text" name="name"><br><br><br>
+                    <div class="input_description">Soyisminiz:</div>
+                    <input type="text" name="surname"><br><br><br>
+                    <div class="input_description">Email:</div>
+                    <input type="email" name="email"><br><br><br>
+                    <div class="input_description">Sitenin Beğendiğiniz yanları:</div>
+                    <input type="checkbox" value="1" id="begen_tasarim"> <label
+                            for="begen_tasarim">Tasarımı</label><br>
+                    <input type="checkbox" value="2" id="begen_icerik"> <label for="begen_icerik">İçerik</label><br>
+                    <input type="checkbox" value="3" id="begen_dinamiklik"> <label for="begen_dinamiklik">Dinamiklik</label><br><br><br>
+                    <div class="input_description">İletişime Geçme Sebebiniz:</div>
+                    <select name="reason">
+                        <option value="İstek">İstek</option>
+                        <option value="Şikayet">Şikayet</option>
+                        <option value="Öneri">Öneri</option>
+                    </select><br><br><br>
+                    <div class="input_description">Mesajınız:</div>
+                    <textarea style="max-width: 100%;" name="mesaj"></textarea><br>
+                    <div class="input_description">Siteye Puanınız(0-100):</div>
+                    <input id="input_puan" name="puan" type="range" min="0" max="100" value="0"><label
+                            id="site_puan">0</label>
+                    <br><br><br>
+                    <button type="submit" style="margin-right: 15px;">Gönder</button>
+                    <button id="clear_form" type="reset">Formu Temizle</button>
+                </form>
+                <br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br>
+            </div>
+        </div>
+        
+        
+        <script>
+            function validateForm() {
+                var isim = document.forms['iletisim_form'][0].value;
+                var soyIsim = document.forms['iletisim_form'][1].value;
+                var email = document.forms['iletisim_form'][2].value;
+                var mesaj = document.forms['iletisim_form'][7].value;
+                if (isim == null || isim == "") {
+                    alert("İsim kısmı boş bırakılamaz");
+                    return false;
+                }
+        
+                if (soyIsim == null || soyIsim == "") {
+                    alert("Soyisim kısmı boş bırakılamaz");
+                    return false;
+                }
+                if (email == null || email == "") {
+                    alert("Email kısmı boş bırakılamaz");
+                    return false;
+                }
+                if (mesaj == null || mesaj == "") {
+                    alert("Mesaj kısmı boş bırakılamaz");
+                    return false;
+                }
+            }
+        
+            document.getElementById("input_puan").onchange = function () {
+                document.getElementById("site_puan").innerHTML = this.value;
+            };
+            document.getElementById("clear_form").onclick = function () {
+                document.getElementById("site_puan").innerHTML = "0";
+            };
+        </script>
+    </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</body>
+
+
+
+
+
+
+</html>
